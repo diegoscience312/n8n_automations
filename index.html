@@ -672,18 +672,130 @@
                 <div class="footer-bottom-content">
                     <p>&copy; 2025 AI Automation. Todos los derechos reservados.</p>
                     <div class="footer-legal">
-                        <a href="#">Política de Privacidad</a>
+                        <a href="#" class="open-legal-modal" data-tab="privacidad">Política de Privacidad</a>
                         <span class="separator">•</span>
-                        <a href="#">Términos de Servicio</a>
+                        <a href="#" class="open-legal-modal" data-tab="terminos">Términos de Servicio</a>
                         <span class="separator">•</span>
-                        <a href="#">Cookies</a>
+                        <a href="#" class="open-legal-modal" data-tab="cookies">Cookies</a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Modal Políticas y Privacidad -->
+    <div id="legal-modal" class="legal-modal" aria-hidden="true">
+        <div class="legal-modal-overlay"></div>
+        <div class="legal-modal-box">
+            <button type="button" class="legal-modal-close" aria-label="Cerrar">&times;</button>
+            <div class="legal-modal-tabs">
+                <button type="button" class="legal-tab active" data-tab="privacidad">Política de Privacidad</button>
+                <button type="button" class="legal-tab" data-tab="terminos">Términos de Servicio</button>
+                <button type="button" class="legal-tab" data-tab="cookies">Cookies</button>
+            </div>
+            <div class="legal-modal-content">
+                <div id="panel-privacidad" class="legal-panel active">
+                    <h2>Política de Privacidad</h2>
+                    <p class="legal-updated">Última actualización: Febrero 2025</p>
+                    <p>En <strong>AI Automation</strong> nos comprometemos a proteger la privacidad de quienes utilizan nuestros servicios de automatización e inteligencia artificial. Esta política describe cómo recopilamos, usamos y protegemos tu información.</p>
+                    <h3>1. Información que recopilamos</h3>
+                    <p>Podemos recopilar datos que nos proporciones al contactarnos o contratar servicios: nombre, correo electrónico, teléfono, nombre de empresa y la información necesaria para implementar flujos de automatización (por ejemplo, integraciones con WhatsApp, CRMs o sistemas propios). Los datos que procesan los bots y flujos se tratan según lo acordado en cada proyecto.</p>
+                    <h3>2. Uso de la información</h3>
+                    <p>Utilizamos la información para ofrecer y mejorar nuestros servicios de automatización, dar soporte, enviar comunicaciones relevantes y cumplir obligaciones legales. No vendemos tus datos personales a terceros.</p>
+                    <h3>3. Bases de datos y flujos</h3>
+                    <p>Los datos que alimentan tus automatizaciones (n8n u otras herramientas) pueden almacenarse en entornos bajo tu control o en los que acordemos. Nos ajustamos a las mejores prácticas de seguridad y, cuando corresponda, a acuerdos de confidencialidad y tratamiento de datos.</p>
+                    <h3>4. Tus derechos</h3>
+                    <p>Puedes solicitar acceso, rectificación, cancelación u oposición al tratamiento de tus datos personales escribiendo a <strong>diego571106@hotmail.com</strong>. Responderemos en un plazo razonable según la normativa aplicable.</p>
+                    <h3>5. Cambios</h3>
+                    <p>Nos reservamos el derecho de actualizar esta política. Los cambios relevantes se comunicarán mediante la web o por correo cuando sea necesario.</p>
+                </div>
+                <div id="panel-terminos" class="legal-panel">
+                    <h2>Términos de Servicio</h2>
+                    <p class="legal-updated">Última actualización: Febrero 2025</p>
+                    <p>Al utilizar los servicios de <strong>AI Automation</strong> (automatización de procesos, bots, integraciones y consultoría en IA) aceptas los siguientes términos.</p>
+                    <h3>1. Descripción del servicio</h3>
+                    <p>Ofrecemos diseño, implementación y mantenimiento de soluciones de automatización (incluyendo flujos con n8n u otras plataformas), bots conversacionales, análisis con IA y consultoría estratégica. El alcance concreto se define en cada propuesta o contrato.</p>
+                    <h3>2. Uso aceptable</h3>
+                    <p>Te comprometes a usar los servicios de forma lícita y ética. No está permitido utilizar las automatizaciones para spam, suplantación, actividades fraudulentas o que vulneren derechos de terceros. Nos reservamos el derecho de suspender el servicio si se detecta un uso contrario a estos términos.</p>
+                    <h3>3. Propiedad intelectual y datos</h3>
+                    <p>Los flujos, scripts y configuraciones desarrollados para tu proyecto se entregan según lo acordado. Los datos que nos facilites o que se procesen en tus sistemas siguen siendo de tu propiedad; nosotros actuamos como responsables del tratamiento solo cuando así se pacte.</p>
+                    <h3>4. Limitación de responsabilidad</h3>
+                    <p>Los servicios se prestan "tal cual". No nos hacemos responsables de daños indirectos o consecuentes derivados del uso de las automatizaciones, salvo que la ley exija lo contrario. La disponibilidad de terceros (APIs, WhatsApp, n8n, etc.) puede afectar el funcionamiento y no está bajo nuestro control exclusivo.</p>
+                    <h3>5. Contacto</h3>
+                    <p>Para dudas sobre estos términos: <strong>diego571106@hotmail.com</strong>.</p>
+                </div>
+                <div id="panel-cookies" class="legal-panel">
+                    <h2>Política de Cookies</h2>
+                    <p class="legal-updated">Última actualización: Febrero 2025</p>
+                    <p>Esta web puede utilizar cookies y tecnologías similares para mejorar la experiencia del usuario y el funcionamiento del sitio.</p>
+                    <h3>1. ¿Qué son las cookies?</h3>
+                    <p>Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo al visitar una web. Permiten recordar preferencias, analizar el tráfico o habilitar ciertas funciones.</p>
+                    <h3>2. Tipos de cookies que usamos</h3>
+                    <p><strong>Esenciales:</strong> necesarias para el correcto funcionamiento del sitio (por ejemplo, preferencias de idioma o sesión).<br>
+                    <strong>Analíticas:</strong> nos ayudan a entender cómo se usa la página (visitas, secciones más vistas) para mejorar el contenido.<br>
+                    <strong>Funcionales:</strong> permiten recordar opciones que elegiste (por ejemplo, si aceptaste esta política).</p>
+                    <h3>3. Control y eliminación</h3>
+                    <p>Puedes configurar tu navegador para bloquear o eliminar cookies. Ten en cuenta que desactivar algunas cookies puede afectar la experiencia en la web.</p>
+                    <h3>4. Actualizaciones</h3>
+                    <p>Podemos actualizar esta política de cookies. Te recomendamos revisarla periódicamente.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
+        // Modal Políticas y Privacidad
+        (function() {
+            const modal = document.getElementById('legal-modal');
+            const overlay = modal?.querySelector('.legal-modal-overlay');
+            const closeBtn = modal?.querySelector('.legal-modal-close');
+            const openLinks = document.querySelectorAll('.open-legal-modal');
+            const tabs = modal?.querySelectorAll('.legal-tab');
+            const panels = modal?.querySelectorAll('.legal-panel');
+
+            function openModal(tabId) {
+                if (!modal) return;
+                modal.classList.add('open');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+                if (tabId) switchTab(tabId);
+            }
+
+            function closeModal() {
+                if (!modal) return;
+                modal.classList.remove('open');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+
+            function switchTab(tabId) {
+                tabs?.forEach(t => {
+                    t.classList.toggle('active', t.getAttribute('data-tab') === tabId);
+                });
+                panels?.forEach(p => {
+                    const id = p.id.replace('panel-', '');
+                    p.classList.toggle('active', id === tabId);
+                });
+            }
+
+            openLinks?.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    openModal(this.getAttribute('data-tab'));
+                });
+            });
+            overlay?.addEventListener('click', closeModal);
+            closeBtn?.addEventListener('click', closeModal);
+            tabs?.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    switchTab(this.getAttribute('data-tab'));
+                });
+            });
+            modal?.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeModal();
+            });
+        })();
+
         // Navbar scroll effect
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
